@@ -1,0 +1,9 @@
+# DBの種類(sqlite/mysql)
+type: sqlite
+sqlite:
+  file: TsukimiyaProject.db
+mysql:
+  url: localhost:3306
+  name: tsukimiyaproject
+  user: root
+  password: password
