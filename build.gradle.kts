@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "mc.tsukimiya"
-version = "1.1.0"
+version = "1.1.1"
 
 repositories {
     mavenCentral()
@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    compileOnly(kotlin("stdlib"))
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
     compileOnly("com.zaxxer:HikariCP:7.0.2")
     compileOnly("com.mysql:mysql-connector-j:9.3.0")
