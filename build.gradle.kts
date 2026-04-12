@@ -1,29 +1,26 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    kotlin("jvm") version "2.2.21"
+    id("com.gradleup.shadow") version "9.3.0+"
     `maven-publish`
 }
 
 group = "mc.tsukimiya"
-version = "1.0.0"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
-    maven {
-        name = "papermc"
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
-    compileOnly("com.zaxxer:HikariCP:6.3.0")
+    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
+    compileOnly("com.zaxxer:HikariCP:7.0.2")
     compileOnly("com.mysql:mysql-connector-j:9.3.0")
     compileOnly("org.xerial:sqlite-jdbc:3.50.3.0")
 }
 
 kotlin {
-    jvmToolchain(23)
+    jvmToolchain(21)
 }
 
 publishing {

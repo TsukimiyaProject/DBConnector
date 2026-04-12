@@ -3,6 +3,7 @@ package mc.tsukimiya.dbconnector
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import java.sql.Connection
+import javax.sql.DataSource
 
 object Database {
     @PublishedApi
@@ -10,6 +11,13 @@ object Database {
 
     @PublishedApi
     internal var conn: Connection? = null
+
+    /**
+     * データソースを取得
+     *
+     * @return
+     */
+    fun getDataSource(): DataSource = dataSource
 
     /**
      * コネクション取得
